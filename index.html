@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Checker Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>ATS Resume Checker Pro</h1>
+        <p>Analyze your resume against a job description and improve your ATS score.</p>
+    </div>
+
+    <div class="input-section">
+        <div class="box">
+            <label>Resume Text</label>
+            <textarea id="resume" placeholder="Paste your resume here..."></textarea>
+        </div>
+
+        <div class="box">
+            <label>Job Description</label>
+            <textarea id="jd" placeholder="Paste job description here..."></textarea>
+        </div>
+    </div>
+
+    <button class="analyze-btn" onclick="checkATS()">
+        Analyze Resume
+    </button>
+
+    <div id="resultSection" class="hidden">
+
+        <div class="score-card">
+            <h2>ATS Score</h2>
+            <div id="scoreValue">0%</div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Resume Words</h3>
+                <p id="resumeWords">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>JD Words</h3>
+                <p id="jdWords">0</p>
+            </div>
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-box">
+                <h3>✅ Matching Skills</h3>
+                <ul id="matchingSkills"></ul>
+            </div>
+
+            <div class="result-box">
+                <h3>❌ Missing Skills</h3>
+                <ul id="missingSkills"></ul>
+            </div>
+
+        </div>
+
+        <div class="recommendation">
+            <h3>Suggestions</h3>
+            <p id="recommendationText"></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <h3>Apurva Anil Pingale</h3>
+        <p>apurvapingale8@gmail.com</p>
+
+        <a href="https://digitalheroesco.com" target="_blank">
+            <button class="digital-btn">
+                Built for Digital Heroes
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
